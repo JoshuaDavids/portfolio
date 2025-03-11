@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<ruleset name="WordPress Development - Theme Coding Standards">
+	<!--Project specific configuration -->
+	<rule ref="./../../../phpcs.xml.dist"/>
+	
+	<!-- Theme specific configuration -->
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<!-- Verify that the text_domain is set to the desired text-domain. Multiple valid text domains can be provided as a comma-delimited list. -->
+			<property name="text_domain" type="array" value="wsk-theme"/>
+		</properties>
+	</rule>
+</ruleset>

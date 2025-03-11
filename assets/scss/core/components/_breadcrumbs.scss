@@ -1,0 +1,10 @@
+//
+// Breadcrumbs
+// --------------------------------------------------
+
+.breadcrumb {
+  a {
+    text-decoration: none;
+    @include animation-underline;
+  }
+}

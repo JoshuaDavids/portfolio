@@ -1,0 +1,31 @@
+//
+// Content / Media Fill
+// --------------------------------------------------
+
+.layout--content-media-fill {
+  .layout__content {
+    @include padding-y-wide;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .layout--content-media-fill {
+    .layout__media {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .layout__media--left {
+      right: 50%;
+      left: 0;
+    }
+
+    .layout__media--right {
+      right: 0;
+      left: 50%;
+    }
+  }
+}

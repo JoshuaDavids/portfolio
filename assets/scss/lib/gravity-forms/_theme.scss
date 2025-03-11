@@ -1,0 +1,161 @@
+//
+// Gravity Forms Theme
+// --------------------------------------------------
+
+.gform_title {
+  font-size: map-get($display-font-sizes, 2);
+}
+
+.gform_body {
+  margin-bottom: map-get($spacers, 3);
+}
+
+.gform_fields {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.gfield {
+  list-style-type: none;
+  margin-bottom: map-get($spacers, 5);
+  text-align: left;
+}
+
+.gfield_checkbox,
+.gfield_radio {
+  padding-left: 0;
+}
+
+.gform_heading {
+  margin-bottom: map-get($spacers, 6);
+  text-align: center;
+
+  .gform_required_legend {
+    display: none;
+  }
+}
+
+.ginput_container_fileupload {
+  margin-top: map-get($spacers, 2);
+}
+
+.gform_drop_instructions {
+  margin-bottom: map-get($spacers, 2);
+  color: map-get($grays, '400');
+  display: block;
+}
+
+.gform_drop_area {
+  background-color: $light;
+  border: 1px dashed map-get($grays, '500');
+  padding: map-get($spacers, 4) map-get($spacers, 2);
+  text-align: center;
+}
+
+.gform_button_select_files {
+  padding-left: map-get($spacers, 5);
+  padding-right: map-get($spacers, 5);
+}
+
+.gform_fileupload_rules {
+  display: none;
+}
+
+.gfield_required_asterisk {
+  color: $primary;
+}
+
+// Validation states
+// -------------------------
+
+.validation_error {
+  display: none;
+}
+
+.gfield_error {
+  .form-control {
+    border-color: map-get($theme-colors, 'danger');
+  }
+}
+
+.validation_message {
+  color: map-get($theme-colors, 'danger');
+  font-size: $font-size-sm;
+  margin-top: 2px;
+}
+
+// Inline form
+// -------------------------
+
+.form--inline {
+  display: flex;
+  border: 1px solid $white;
+  margin-bottom: map-get($spacers, 5);
+
+  .gform_body {
+    flex: 1;
+    margin-bottom: 0;
+
+    .gfield {
+      margin-bottom: 0;
+    }
+
+    .form-control {
+      background-color: $white;
+      height: 3.5rem;
+      border: none;
+      min-height: auto;
+      padding-left: map-get($spacers, 4);
+      padding-right: map-get($spacers, 4);
+    }
+
+    .validation_message {
+      position: absolute;
+    }
+  }
+
+  .gform_footer {
+    .gform_btn {
+      background-color: $primary;
+      color: $white;
+      height: 3.5rem;
+      min-width: auto;
+      padding-left: map-get($spacers, 4);
+      padding-right: map-get($spacers, 4);
+
+      &:hover {
+        color: $body-color;
+        background-color: $white;
+      }
+    }
+
+    .gform_ajax_spinner {
+      display: none;
+    }
+  }
+
+  &.gform_confirmation_wrapper {
+    min-height: 3.5rem;
+    border-bottom: none;
+    font-size: $font-size-lg;
+  }
+}
+
+// Utility classes
+// -------------------------
+
+.hide_summary {
+  display: none;
+}
+
+.hidden_label {
+  .gfield_label {
+    display: none;
+  }
+}
+
+.gform_validation_container {
+  display: none;
+  position: absolute;
+  left: -9000px;
+}

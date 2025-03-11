@@ -1,0 +1,77 @@
+//
+//  Navbar
+// --------------------------------------------------
+
+.navbar {
+  transition: all 0.24s ease-in-out;
+  transform: translateY(0);
+  color: var(--wskt-nav-color);
+
+  padding-top: map-get($spacers, 4);
+  padding-bottom: map-get($spacers, 4);
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 1;
+    transition: opacity 0.24s ease-out;
+  }
+}
+
+.navbar--hide {
+  transform: translateY(-$navbar-height);
+}
+
+@include media-breakpoint-up($navbar-expand-breakpoint) {
+  .navbar-expand-xl {
+    .navbar-collapse {
+      align-items: flex-end;
+      flex-direction: column;
+    }
+  }
+}
+
+//
+//  Colour Schemes
+// -------------------------
+
+.navbar-light {
+  --wskt-nav-color: #{$navbar-light-color};
+
+  .navbar-nav {
+    --bs-nav-link-color: #{$navbar-light-color};
+    --bs-nav-link-hover-color: #{$navbar-light-hover-color};
+    --bs-navbar-active-color: #{$navbar-light-hover-color};
+  }
+
+  &::after {
+    background-color: $light;
+  }
+}
+
+.navbar-dark {
+  --bs-navbar-brand-color: #{$primary};
+  --bs-navbar-brand-hover-color: #{$primary};
+  --wskt-nav-color: #{$navbar-dark-color};
+
+  .navbar-nav {
+    --bs-nav-link-color: #{$navbar-dark-color};
+    --bs-nav-link-hover-color: #{$navbar-dark-hover-color};
+    --bs-navbar-active-color: #{$navbar-dark-hover-color};
+  }
+
+  &::after {
+    background-color: $dark;
+  }
+}
+
+.navbar-transparent {
+  &::after {
+    opacity: 0;
+  }
+}

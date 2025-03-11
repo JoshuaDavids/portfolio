@@ -1,0 +1,108 @@
+//
+// Fade
+// --------------------------------------------------
+
+.animation--fade-in {
+  opacity: 0;
+  transition-duration: 1.92s;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition-property: opacity;
+}
+
+.animation--fade-in-up {
+  opacity: 0;
+  transform: translateY(32px);
+  transition-duration: 1.28s;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition-property: transform, opacity;
+}
+
+.animation--fade-in-down {
+  opacity: 0;
+  transform: translateY(-32px);
+  transition-duration: 1.28s;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition-property: transform, opacity;
+}
+
+.animation--fade-in-left {
+  opacity: 0;
+  transform: translateX(32px);
+  transition-duration: 1.28s;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition-property: transform, opacity;
+  z-index: 1;
+}
+
+.animation--fade-in-right {
+  opacity: 0;
+  transform: translateX(-32px);
+  transition-duration: 1.28s;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition-property: transform, opacity;
+  z-index: 1;
+}
+
+.animation--stepped-fade-in-up {
+  .animation__item {
+    opacity: 0;
+    transform: translateY(32px);
+    transition-duration: 1.28s;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition-property: transform, opacity;
+
+    @for $i from 1 through 20 {
+      &:nth-child(#{$i}) {
+        transition-delay: $i * 0.04s;
+      }
+    }
+  }
+}
+
+.animation--stepped-fade-in-left {
+  .animation__item {
+    opacity: 0;
+    transform: translateX(32px);
+    transition-duration: 1.28s;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition-property: transform, opacity;
+
+    @for $i from 1 through 20 {
+      &:nth-child(#{$i}) {
+        transition-delay: $i * 0.04s;
+      }
+    }
+  }
+}
+
+.animate {
+  &.animation--fade-in {
+    opacity: 1;
+  }
+
+  &.animation--fade-in-up,
+  &.animation--fade-in-down {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &.animation--fade-in-left,
+  &.animation--fade-in-right {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  &.animation--stepped-fade-in-up {
+    .animation__item {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &.animation--stepped-fade-in-left {
+    .animation__item {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}

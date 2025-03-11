@@ -1,0 +1,24 @@
+//
+// Navbar Brand
+// --------------------------------------------------
+
+.navbar-brand {
+  height: 20px;
+  width: 202px;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+  font-size: 0;
+
+  > svg {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@include media-breakpoint-up($navbar-expand-breakpoint) {
+  .navbar-brand {
+    height: 30px;
+    width: 303px;
+  }
+}

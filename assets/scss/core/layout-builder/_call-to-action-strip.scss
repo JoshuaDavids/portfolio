@@ -1,0 +1,18 @@
+//
+// Call To Action : Strip
+// --------------------------------------------------
+
+@include media-breakpoint-up(lg) {
+  .layout--call-to-action-strip {
+    .layout__content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .layout__body {
+      flex: 1;
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+//
+// Delay
+// --------------------------------------------------
+
+@for $i from 1 to 12 {
+  .animation--delay-#{$i} {
+    transition-delay: 0.16s * $i;
+  }
+}

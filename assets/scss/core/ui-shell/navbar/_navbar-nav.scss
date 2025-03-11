@@ -1,0 +1,34 @@
+//
+// Navbar Nav
+// --------------------------------------------------
+
+@include media-breakpoint-up($navbar-expand-breakpoint) {
+  .navbar-expand-xl {
+    .navbar-nav {
+      > .nav-item {
+        margin-right: map-get($spacers, 6);
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      .nav-link {
+        @include animation-underline;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+    }
+
+    .dropdown-menu--depth-1 {
+      position: static !important;
+      transform: none !important;
+      margin-top: 0;
+      border: none;
+
+      .dropdown-item {
+        padding-left: map-get($spacers, 6);
+      }
+    }
+  }
+}

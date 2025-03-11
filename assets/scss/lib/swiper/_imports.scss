@@ -1,0 +1,36 @@
+//
+// Swiper imports
+//
+// Imports Swipers source SCSS files. Comment out the optional parts you
+// don't need below
+//
+// link: https://swiperjs.com/swiper-api#scss-styles
+// --------------------------------------------------
+
+// Core (required)
+@import 'swiper/scss';
+
+// Modules (optional)
+// @import 'swiper/scss/a11y';
+// @import 'swiper/scss/autoplay';
+// @import 'swiper/scss/controller';
+// @import 'swiper/scss/effect-cards';
+// @import 'swiper/scss/effect-coverflow';
+// @import 'swiper/scss/effect-creative';
+// @import 'swiper/scss/effect-cube';
+// @import 'swiper/scss/effect-fade';
+// @import 'swiper/scss/effect-flip';
+// @import 'swiper/scss/free-mode';
+// @import 'swiper/scss/grid';
+// @import 'swiper/scss/hash-navigation';
+// @import 'swiper/scss/history';
+// @import 'swiper/scss/keyboard';
+// @import 'swiper/scss/manipulation';
+// @import 'swiper/scss/mousewheel';
+@import 'swiper/scss/navigation';
+@import 'swiper/scss/pagination';
+@import 'swiper/scss/parallax';
+@import 'swiper/scss/scrollbar';
+// @import 'swiper/scss/thumbs';
+// @import 'swiper/scss/virtual';
+// @import 'swiper/scss/zoom';

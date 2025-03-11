@@ -1,0 +1,47 @@
+//
+//  Case Studies
+// --------------------------------------------------
+.layout--case-studies {
+  padding-block: 80px;
+
+  .accordion__box {
+    display: flex;
+    justify-content: center;
+    .indicator {
+      position: relative;
+      top: -1.5rem;
+      left: 0;
+      width: 5px;
+      height: 5px;
+      background: #fff;
+      border-radius: 100%;
+      transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    .gallery {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      overflow: hidden;
+
+      .gallery__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 0 1 40px;
+        height: 550px;
+        margin: 0 5px;
+        border-radius: 40px;
+        background: #000;
+        overflow: hidden;
+        transition: flex 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+        img {
+          width: 600px;
+          height: 100%;
+          object-fit: contain;
+          transform: scale(2);
+        }
+      }
+    }
+  }
+}

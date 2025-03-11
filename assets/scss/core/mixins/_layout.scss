@@ -1,0 +1,65 @@
+//
+// Mixins: Layout
+// --------------------------------------------------
+
+@mixin padding-y-tight {
+  padding-top: $layout-padding-y-tight;
+  padding-bottom: $layout-padding-y-tight;
+
+  @include media-breakpoint-up(lg) {
+    padding-top: $layout-padding-y-tight-lg;
+    padding-bottom: $layout-padding-y-tight-lg;
+  }
+}
+
+@mixin padding-top-tight {
+  padding-top: $layout-padding-y-tight;
+
+  @include media-breakpoint-up(lg) {
+    padding-top: $layout-padding-y-tight-lg;
+  }
+}
+
+@mixin padding-bottom-tight {
+  padding-bottom: $layout-padding-y-tight;
+
+  @include media-breakpoint-up(lg) {
+    padding-bottom: $layout-padding-y-tight-lg;
+  }
+}
+
+@mixin padding-y {
+  padding-top: $layout-padding-y;
+  padding-bottom: $layout-padding-y;
+
+  @include media-breakpoint-up(lg) {
+    padding-top: $layout-padding-y-lg;
+    padding-bottom: $layout-padding-y-lg;
+  }
+}
+
+@mixin padding-y-wide {
+  padding-top: $layout-padding-y * 2;
+  padding-bottom: $layout-padding-y * 2;
+
+  @include media-breakpoint-up(lg) {
+    padding-top: $layout-padding-y-lg * 2;
+    padding-bottom: $layout-padding-y-lg * 2;
+  }
+}
+
+@mixin padding-top {
+  padding-top: $layout-padding-y;
+
+  @include media-breakpoint-up(lg) {
+    padding-top: $layout-padding-y-lg;
+  }
+}
+
+@mixin padding-bottom {
+  padding-bottom: $layout-padding-y;
+
+  @include media-breakpoint-up(lg) {
+    padding-bottom: $layout-padding-y-lg;
+  }
+}

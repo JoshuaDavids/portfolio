@@ -1,0 +1,107 @@
+//
+// Navbar Toggler
+// --------------------------------------------------
+
+$navbar-toggler-layer-width: 1.75rem;
+$navbar-toggler-layer-height: 0.125rem;
+$navbar-toggler-layer-spacing: 0.5rem;
+$navbar-light-toggler-layer-color: $navbar-light-active-color;
+$navbar-light-toggler-label-color: $navbar-light-active-color;
+$navbar-dark-toggler-layer-color: $navbar-dark-active-color;
+$navbar-dark-toggler-label-color: $navbar-dark-active-color;
+
+.navbar-toggler {
+  position: relative;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  height: ($navbar-toggler-layer-height * 3) + ($navbar-toggler-layer-spacing * 2);
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    width: $navbar-toggler-layer-width;
+    height: $navbar-toggler-layer-height;
+    border-radius: 0.25rem;
+  }
+
+  &::before {
+    top: calc(50% - #{$navbar-toggler-layer-height / 2} - $navbar-toggler-layer-spacing);
+  }
+
+  &::after {
+    bottom: calc(50% - #{$navbar-toggler-layer-height / 2} - $navbar-toggler-layer-spacing);
+  }
+}
+
+.navbar-toggler__icon {
+  display: inline-block;
+  width: $navbar-toggler-layer-width;
+  height: $navbar-toggler-layer-height;
+  border-radius: 0.25rem;
+}
+
+// Colour schemes
+// TODO: Extract to use CSS variables
+// -------------------------
+
+.navbar-default,
+.navbar-light {
+  .navbar-toggler__icon {
+    background-color: $navbar-light-toggler-layer-color;
+  }
+
+  .navbar-toggler {
+    &::before,
+    &::after {
+      background-color: $navbar-light-toggler-layer-color;
+    }
+  }
+}
+
+.navbar-dark {
+  .navbar-toggler__icon {
+    background-color: $navbar-dark-toggler-layer-color;
+  }
+
+  .navbar-toggler {
+    &::before,
+    &::after {
+      background-color: $navbar-dark-toggler-layer-color;
+    }
+  }
+}
+
+// Animation
+// -------------------------
+
+.navbar-toggler {
+  &::before {
+    transition: top 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+
+  &::after {
+    transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+
+  &[aria-expanded='true'] {
+    .navbar-toggler__icon {
+      opacity: 0;
+    }
+
+    &::before {
+      top: calc(50% - #{$navbar-toggler-layer-height / 2});
+      transform: rotate(45deg);
+      transition: top 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+    &::after {
+      bottom: calc(50% - #{$navbar-toggler-layer-height / 2});
+      transform: rotate(-45deg);
+      transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+  }
+}

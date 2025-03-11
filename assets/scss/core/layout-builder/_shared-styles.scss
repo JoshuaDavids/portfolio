@@ -1,0 +1,72 @@
+//
+// Shared Styles
+// --------------------------------------------------
+
+.layout {
+  position: relative;
+}
+
+.layout__content {
+  @include mb-0-last-child;
+}
+
+.layout__header {
+  margin-bottom: map-get($spacers, 6);
+}
+
+.layout__body {
+  @include mb-0-last-child;
+  margin-bottom: map-get($spacers, 8);
+}
+
+// Padding
+// -------------------------
+
+.layout--padding-y-tight {
+  @include padding-y-tight;
+}
+
+.layout--padding-y {
+  @include padding-y;
+}
+
+.layout--padding-y-wide {
+  @include padding-y-wide;
+}
+
+// Counter Paddings
+// -------------------------
+
+@mixin apply-padding-collapse($scheme-name) {
+  .colour-scheme--#{$scheme-name} {
+    &.layout--padding-y-tight {
+      + .colour-scheme--#{$scheme-name} {
+        &.layout--padding-y-tight {
+          margin-top: -$layout-padding-y-tight;
+
+          @include media-breakpoint-up(lg) {
+            margin-top: -$layout-padding-y-tight-lg;
+          }
+        }
+      }
+    }
+
+    &.layout--padding-y {
+      + .colour-scheme--#{$scheme-name} {
+        &.layout--padding-y {
+          margin-top: -$layout-padding-y;
+
+          @include media-breakpoint-up(lg) {
+            margin-top: -$layout-padding-y-lg;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include apply-padding-collapse('default');
+@include apply-padding-collapse('light');
+@include apply-padding-collapse('dark');
+@include apply-padding-collapse('primary');
+@include apply-padding-collapse('secondary');

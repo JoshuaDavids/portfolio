@@ -1,0 +1,55 @@
+//
+// Component: Overlay
+// --------------------------------------------------
+
+.overlay {
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  z-index: $zindex-fixed - 1; // Below navbar
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 100dvh;
+}
+
+.overlay--scroll-lock {
+  overflow: hidden;
+}
+
+.overlay--active {
+  display: block;
+}
+
+.overlay__header {
+  padding-top: map-get($spacers, 7);
+  padding-bottom: map-get($spacers, 7);
+
+  > .container-fluid {
+    display: flex;
+  }
+}
+
+.overlay__title {
+  margin-right: auto;
+  margin-bottom: 0;
+}
+
+.overlay__content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.overlay__content-inner {
+  height: 100%;
+}

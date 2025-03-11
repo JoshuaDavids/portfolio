@@ -1,0 +1,12 @@
+//
+// Post Tile
+// --------------------------------------------------
+
+.post-tile {
+  position: relative;
+  padding-right: map-get($spacers, 8);
+}
+
+.post-tile__meta {
+  margin-bottom: map-get($spacers, 2);
+}

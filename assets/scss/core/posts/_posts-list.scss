@@ -1,0 +1,8 @@
+//
+// Posts List
+// --------------------------------------------------
+
+.posts-list__item {
+  padding: map-get($spacers, 6) map-get($spacers, 4);
+  border-bottom: 1px solid map-get($grays, '900');
+}

@@ -1,0 +1,25 @@
+//
+// Underline
+// --------------------------------------------------
+
+@mixin animation-underline {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 0%;
+    background-color: var(--bs-link-hover-color);
+    display: block;
+    transition: width 0.24s ease-in-out;
+  }
+
+  &:hover {
+    &::before {
+      width: 100%;
+    }
+  }
+}

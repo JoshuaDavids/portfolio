@@ -1,0 +1,46 @@
+//
+// Button
+// --------------------------------------------------
+
+.btn {
+  border-radius: $btn-border-radius;
+}
+
+.btn-icon-only {
+  color: inherit;
+  padding: 0;
+  border: none;
+
+  &:hover {
+    color: inherit;
+  }
+}
+
+.btn-blank {
+  padding: 0;
+  border: none;
+
+  &:focus,
+  &:active {
+    border: none;
+  }
+}
+
+.btn__icon {
+  color: inherit;
+
+  /* stylelint-disable-next-line value-keyword-case */
+  fill: currentColor;
+}
+
+.btn__icon-left {
+  position: relative;
+  top: -0.0625rem;
+  margin-right: map-get($spacers, 4);
+}
+
+.btn__icon-right {
+  position: relative;
+  top: -0.0625rem;
+  margin-left: map-get($spacers, 4);
+}

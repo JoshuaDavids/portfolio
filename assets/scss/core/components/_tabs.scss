@@ -1,0 +1,61 @@
+//
+// Tabs
+// --------------------------------------------------
+
+.nav-tabs {
+  margin-bottom: map-get($spacers, 6);
+
+  .nav-item {
+    flex: 1;
+    margin-bottom: -2px;
+  }
+
+  .nav-link {
+    height: 100%;
+    width: 100%;
+    border-width: 0 0 $nav-tabs-border-width 0;
+  }
+}
+
+.responsive-tabs {
+  .collapse-toggle {
+    width: 100%;
+    align-items: center;
+    border-bottom: 1px solid;
+    padding-top: map-get($spacers, 4);
+    padding-bottom: map-get($spacers, 4);
+
+    .collapse-toggle__icon {
+      margin-left: auto;
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .responsive-tabs {
+    .nav-tabs {
+      display: none;
+    }
+
+    .collapse__inner {
+      padding-top: map-get($spacers, 6);
+    }
+
+    .tab-pane {
+      display: block;
+      opacity: 1;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .responsive-tabs {
+    .collapse {
+      display: block !important;
+    }
+
+    .collapse-toggle {
+      display: none;
+    }
+  }
+}

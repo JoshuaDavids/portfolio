@@ -1,0 +1,30 @@
+//
+// WordPress
+// --------------------------------------------------
+
+.aligncenter,
+.alignleft,
+.alignright {
+  display: block;
+  padding: 0;
+}
+
+.aligncenter {
+  float: none;
+  margin: 0 auto map-get($spacers, 6);
+}
+
+.alignright {
+  float: right;
+  margin: 0 0 map-get($spacers, 6) map-get($spacers, 6);
+}
+
+.alignleft {
+  float: left;
+  margin: 0 map-get($spacers, 6) map-get($spacers, 6) 0;
+}
+
+.wp-caption-text {
+  margin-top: map-get($spacers, 4);
+  font-weight: $font-weight-semibold;
+}

@@ -1,0 +1,16 @@
+//
+// Link
+// --------------------------------------------------
+
+.link-plain {
+  text-decoration: none;
+}
+
+.link-muted {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    color: inherit;
+  }
+}

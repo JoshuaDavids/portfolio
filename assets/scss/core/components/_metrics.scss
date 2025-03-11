@@ -1,0 +1,90 @@
+//
+// Metrics
+// --------------------------------------------------
+
+.metrics {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.metric {
+  position: relative;
+  list-style-type: none;
+  margin-bottom: map-get($spacers, 8);
+  padding: 0 0 map-get($spacers, 6) map-get($spacers, 3);
+  width: 50%;
+
+  &::before {
+    content: '';
+    background-color: $body-color;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 1px;
+  }
+}
+
+.metric__value {
+  line-height: 0.8;
+  margin-bottom: map-get($spacers, 3);
+}
+
+.metric__description {
+  display: inline-block;
+  max-width: 150px;
+}
+
+@include media-breakpoint-up(sm) {
+  .metric {
+    width: unset;
+    flex: 1;
+    padding-bottom: map-get($spacers, 10);
+    padding-left: map-get($spacers, 4);
+    margin-bottom: 0;
+  }
+
+  .metric__value {
+    margin-bottom: map-get($spacers, 4);
+  }
+
+  .metric__description {
+    max-width: 162px;
+  }
+}
+
+// Animations
+
+.animation--metrics {
+  .metric {
+    &::before {
+      height: 0%;
+      transition: height 0.8s ease-in-out;
+    }
+  }
+
+  .metric__value {
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+  }
+
+  .metric__description {
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out 0.18s;
+  }
+
+  &.animate {
+    .metric {
+      &::before {
+        height: 100%;
+      }
+    }
+
+    .metric__value,
+    .metric__description {
+      opacity: 1;
+    }
+  }
+}

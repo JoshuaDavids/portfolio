@@ -1,0 +1,36 @@
+//
+// Accordion / Media
+// --------------------------------------------------
+
+.layout--accordion-media {
+   .layout__header {
+     margin-bottom: map-get($spacers, 8);
+   }
+ 
+   .layout__media {
+     display: none;
+   }
+ }
+ 
+ @include media-breakpoint-up(md) {
+   .layout--accordion-media {
+     .col--media {
+       position: relative;
+     }
+ 
+     .layout__media {
+       display: block;
+       position: absolute;
+       top: 0;
+       right: 0;
+       bottom: 0;
+       left: 0;
+       opacity: 0;
+       transition: opacity 0.36s ease-in-out;
+     }
+ 
+     .layout__media--active {
+       opacity: 1;
+     }
+   }
+ }

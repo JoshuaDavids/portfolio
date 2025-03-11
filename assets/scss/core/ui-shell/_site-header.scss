@@ -1,0 +1,13 @@
+//
+// Site Header
+// --------------------------------------------------
+
+.site-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: $zindex-fixed;
+  width: 100%;
+  max-width: $site-max-width;
+}

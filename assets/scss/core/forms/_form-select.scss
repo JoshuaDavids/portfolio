@@ -1,0 +1,16 @@
+//
+// Form Select
+// --------------------------------------------------
+
+select {
+  &.form-control {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24'><path fill='none' d='M0 0h24v24H0z'/><path d='M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right $input-btn-padding-x top 50%;
+    padding-right: map-get($spacers, 8);
+  }
+
+  &.form-control-sm {
+    background-position: right $input-btn-padding-x-sm top 50%;
+  }
+}

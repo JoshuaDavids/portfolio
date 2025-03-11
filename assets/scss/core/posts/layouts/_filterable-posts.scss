@@ -1,0 +1,11 @@
+//
+// Filterable Listing
+// --------------------------------------------------
+
+.layout--filterable-posts {
+  padding-top: 0;
+
+  .posts-filtering {
+    margin-bottom: map-get($spacers, 8);
+  }
+}

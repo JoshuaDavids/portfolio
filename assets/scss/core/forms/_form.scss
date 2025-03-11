@@ -1,0 +1,11 @@
+//
+// Form
+// --------------------------------------------------
+
+.form__header {
+  margin-bottom: map-get($spacers, 7);
+}
+
+.form__footer {
+  margin-top: map-get($spacers, 7);
+}

@@ -1,0 +1,40 @@
+//
+//  Expanding Accordions
+// --------------------------------------------------
+
+.project__container {
+  display: flex;
+  .panel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 75vh;
+    border-radius: 50px;
+    color: #fff;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    cursor: pointer;
+    .description {
+      position: absolute;
+      left: 40px;
+      bottom: 20px;
+      margin: 0;
+      opacity: 0;
+      h4 {
+        font-size: 24px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+    &.active {
+      flex: 5;
+      transition: all 0.3s ease-in-out;
+      .description {
+        opacity: 1;
+        transition: opacity 0.4s ease-in 0.3s;
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+//
+// Form Control
+// --------------------------------------------------
+
+:root {
+  --wskt-form-control-bg: #{$input-bg};
+  --wskt-form-control-color: #{$input-color};
+  --wskt-form-control-border-color: #{$input-border-color};
+  --wskt-form-control-placeholder-color: #{$input-placeholder-color};
+}
+
+.form-control {
+  background-color: var(--wskt-form-control-bg);
+  color: var(--wskt-form-control-color);
+  border-color: var(--wskt-form-control-border-color);
+
+  &:active {
+    background-color: var(--wskt-form-control-bg);
+  }
+
+  &:focus {
+    color: var(--wskt-form-control-color);
+  }
+
+  &::placeholder {
+    color: var(--wskt-form-control-placeholder-color);
+    opacity: 1;
+  }
+
+  &::-ms-input-placeholder {
+    color: var(--wskt-form-control-placeholder-color);
+  }
+}

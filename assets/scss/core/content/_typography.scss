@@ -1,0 +1,12 @@
+//
+// Typography
+// --------------------------------------------------
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.display-1 {
+  margin-bottom: map-get($spacers, 10);
+}

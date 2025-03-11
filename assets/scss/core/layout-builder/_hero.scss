@@ -1,0 +1,19 @@
+//
+//  Hero
+// --------------------------------------------------
+
+.layout--hero {
+  display: flex;
+  align-items: center;
+  min-height: 80dvh;
+
+  .layout__content {
+    max-width: 480px;
+    position: relative;
+    z-index: $z-index-content;
+  }
+
+  .layout__title {
+    margin-bottom: 0;
+  }
+}

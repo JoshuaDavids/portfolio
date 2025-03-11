@@ -1,0 +1,19 @@
+//
+// Grid
+// --------------------------------------------------
+
+@mixin container-padding {
+  padding-left: $container-padding-x;
+  padding-right: $container-padding-x;
+
+  @include media-breakpoint-up(lg) {
+    padding-left: $grid-gutter-width * 2;
+    padding-right: $grid-gutter-width * 2;
+  }
+}
+
+@mixin row {
+  @include media-breakpoint-up(lg) {
+    --bs-gutter-x: 2rem;
+  }
+}

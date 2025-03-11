@@ -1,0 +1,50 @@
+//
+// Variables
+// --------------------------------------------------
+
+// ------------------------------------
+// Global
+// ------------------------------------
+
+// Colours
+// -------------------------
+
+$primary-contrast: $white;
+$secondary-contrast: $black;
+
+// Layout
+// -------------------------
+
+$site-max-width: none;
+$z-index-background: 5;
+$z-index-content: 10;
+
+// Padding
+// -------------------------
+
+$layout-padding-y-tight: map-get($spacers, 6);
+$layout-padding-y-tight-lg: map-get($spacers, 8);
+$layout-padding-y: map-get($spacers, 10);
+$layout-padding-y-lg: map-get($spacers, 12);
+$layout-padding-y-wide: $layout-padding-y * 2;
+$layout-padding-y-wide-lg: $layout-padding-y-lg * 2;
+
+// ------------------------------------
+// Components
+// ------------------------------------
+
+// Grid
+// -------------------------
+
+$container-max-width: 82rem + (2 * $container-padding-x);
+
+// Collapse Toggle
+// -------------------------
+
+$collapse-toggle-color: $body-color;
+
+// Navbar
+// -------------------------
+
+$navbar-height: 5rem;
+$navbar-expand-breakpoint: 'xl';

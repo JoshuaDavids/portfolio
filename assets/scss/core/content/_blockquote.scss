@@ -1,0 +1,15 @@
+//
+// Blockquote
+// --------------------------------------------------
+
+.blockquote--centered {
+  text-align: center;
+}
+
+.blockquote__body {
+  @include mb-0-last-child;
+}
+
+.blockquote__footer {
+  margin-top: map-get($spacers, 3);
+}

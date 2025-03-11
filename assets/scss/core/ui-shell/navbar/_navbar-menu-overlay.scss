@@ -1,0 +1,19 @@
+//
+// Navbar Menu Overlay
+// --------------------------------------------------
+
+.navbar-menu-overlay {
+  padding-top: $navbar-height;
+  padding-bottom: $navbar-height;
+
+  .dropdown-menu {
+    position: static !important;
+    transform: none !important;
+  }
+
+  .dropdown-menu--depth-1 {
+    .dropdown-item {
+      padding-left: map-get($spacers, 6);
+    }
+  }
+}

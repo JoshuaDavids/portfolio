@@ -1,0 +1,55 @@
+//
+//  Logo Row
+// --------------------------------------------------
+
+.layout--logo-grid {
+   .layout__content {
+     padding-right: 0 !important;
+   }
+ 
+   .layout__header {
+     text-align: left;
+   }
+ 
+   .layout__title {
+     font-weight: $font-weight-semibold;
+   }
+ 
+   .layout__body {
+     margin-bottom: 0;
+     overflow-y: scroll;
+     white-space: nowrap;
+     margin-bottom: 0;
+ 
+     -ms-overflow-style: none; /* Internet Explorer 10+ */
+     scrollbar-width: none; /* Firefox */
+ 
+     &::-webkit-scrollbar {
+       display: none; /* Safari and Chrome */
+     }
+   }
+ 
+   .logo {
+     display: inline-block;
+     height: 3.5rem;
+     margin-right: map-get($spacers, 6);
+   }
+ 
+   .media {
+     height: 100%;
+     width: auto;
+   }
+ }
+ 
+ @include media-breakpoint-up(lg) {
+   .layout--logo-grid {
+     .logo {
+       margin-right: 56px;
+ 
+       &:last-child {
+         margin-right: map-get($spacers, 11);
+       }
+     }
+   }
+ }
+ 

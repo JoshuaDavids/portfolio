@@ -1,0 +1,26 @@
+//
+// List
+// --------------------------------------------------
+
+.list {
+  padding-left: map-get($spacers, 5);
+
+  > li {
+    margin-bottom: map-get($spacers, 4);
+  }
+}
+
+.list-inline {
+  margin: 0;
+  padding: 0;
+  display: flex;
+
+  > li {
+    list-style-type: none;
+    margin-right: map-get($spacers, 4);
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

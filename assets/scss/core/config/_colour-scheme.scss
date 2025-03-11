@@ -1,0 +1,84 @@
+//
+// Colour Scheme
+// --------------------------------------------------
+
+.colour-scheme {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: inherit;
+
+    a {
+      color: inherit;
+    }
+  }
+
+  p {
+    color: inherit;
+  }
+
+  .icon {
+    color: inherit;
+  }
+}
+
+.colour-scheme--light {
+  background-color: $light;
+  color: $body-color;
+}
+
+.colour-scheme--dark {
+  background-color: $dark;
+  color: $white;
+}
+
+.colour-scheme--primary {
+  background-color: $primary;
+  color: $primary-contrast;
+
+  .btn-primary {
+    --bs-btn-bg: #{$primary-contrast};
+    --bs-btn-border-color: #{$primary-contrast};
+    --bs-btn-color: #{$primary};
+
+    --bs-btn-hover-bg: #{$primary-contrast};
+    --bs-btn-hover-border-color: #{$primary-contrast};
+    --bs-btn-hover-color: #{$primary};
+  }
+
+  .btn-outline-primary {
+    --bs-btn-border-color: #{$primary-contrast};
+    --bs-btn-color: #{$primary-contrast};
+
+    --bs-btn-hover-bg: #{$primary-contrast};
+    --bs-btn-hover-border-color: #{$primary-contrast};
+    --bs-btn-hover-color: #{$primary};
+  }
+}
+
+.colour-scheme--secondary {
+  background-color: $secondary;
+  color: $secondary-contrast;
+
+  .btn-secondary {
+    --bs-btn-bg: #{$secondary-contrast};
+    --bs-btn-border-color: #{$secondary-contrast};
+    --bs-btn-color: #{$secondary};
+
+    --bs-btn-hover-bg: #{$secondary-contrast};
+    --bs-btn-hover-border-color: #{$secondary-contrast};
+    --bs-btn-hover-color: #{$secondary};
+  }
+
+  .btn-outline-secondary {
+    --bs-btn-border-color: #{$secondary-contrast};
+    --bs-btn-color: #{$secondary-contrast};
+
+    --bs-btn-hover-bg: #{$secondary-contrast};
+    --bs-btn-hover-border-color: #{$secondary-contrast};
+    --bs-btn-hover-color: #{$secondary};
+  }
+}

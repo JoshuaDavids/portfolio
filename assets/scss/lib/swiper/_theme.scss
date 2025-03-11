@@ -1,0 +1,60 @@
+//
+// Swiper Theme
+// --------------------------------------------------
+
+.swiper-slide {
+  transition-property: transform, opacity !important;
+  height: auto;
+  display: flex;
+}
+
+// Pagination
+// -------------------------
+
+.swiper-controls-pagination {
+  display: flex;
+  align-items: center;
+  color: var(--swiper-navigation-color);
+}
+
+// Controls
+// -------------------------
+
+.swiper-controls {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: map-get($spacers, 4);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: relative;
+  width: auto;
+  height: auto;
+  top: unset;
+  right: unset;
+  bottom: unset;
+  left: unset;
+  margin: 0;
+
+  &:hover,
+  &.swiper-button-disabled {
+    color: var(--swiper-navigation-hover-color) !important; // Awkward bootstrap specificity
+  }
+
+  &.swiper-button-disabled {
+    opacity: 0.6;
+  }
+
+  &::after {
+    display: none;
+  }
+}
+
+.swiper-button-prev {
+  margin-right: map-get($spacers, 2);
+}
+
+.swiper-button-next {
+  margin-left: map-get($spacers, 2);
+}

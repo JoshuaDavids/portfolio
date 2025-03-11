@@ -1,0 +1,15 @@
+//
+// Dropdown
+// --------------------------------------------------
+
+.dropdown-toggle {
+  &:after {
+    transition: transform 0.24s ease-in-out;
+  }
+
+  &[aria-expanded='true'] {
+    &:after {
+      transform: rotate(180deg);
+    }
+  }
+}

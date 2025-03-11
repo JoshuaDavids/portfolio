@@ -1,0 +1,17 @@
+//
+// Posts Pagination
+// --------------------------------------------------
+
+.posts-pagination {
+  margin-top: map-get($spacers, 8);
+  display: flex;
+  align-items: center;
+}
+
+.posts-pagination-detail {
+  line-height: 1;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-bold;
+  margin-left: map-get($spacers, 3);
+  margin-right: map-get($spacers, 3);
+}

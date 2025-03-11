@@ -1,0 +1,17 @@
+//
+// Accordion
+// --------------------------------------------------
+
+.accordion-button {
+  .collapse-toggle__icon {
+    margin-left: auto;
+  }
+
+  &::after {
+    display: none;
+  }
+}
+
+.accordion-body {
+  @include mb-0-last-child;
+}
