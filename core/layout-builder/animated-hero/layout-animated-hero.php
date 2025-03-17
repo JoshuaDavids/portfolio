@@ -1,28 +1,30 @@
 <?php
+
 /**
  * Layout - Hero
  *
  * @package WSK_Theme/Core
  */
 
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 
 /**
  * Layout template function.
  *
  * @param array $attrs Layout attributes.
  */
-function wskt_layout_hero( $attrs = array() ) {
+function wskt_layout_animated_hero($attrs = array())
+{
 	$default_attrs = array(
-		'background' => array(),
+		'title'    => '',
 		'content'    => '',
 		'button'     => array(),
 	);
 
-	$args = wp_parse_args( $attrs, $default_attrs );
+	$args = wp_parse_args($attrs, $default_attrs);
 
 	get_template_part(
-		'core/layout-builder/hero/layout-template-hero',
+		'core/layout-builder/animated-hero/layout-template-animated-hero',
 		null,
 		$args
 	);

@@ -28,6 +28,8 @@ require_once 'split-content/split-content.php';
 // Custom Concepts
 require_once 'blog-posts/blog-posts.php';
 require_once 'case-study-slider/case-study-slider.php';
+require_once 'testimonials-slider/testimonials-slider.php';
+require_once 'animated-hero/animated-hero.php';
 
 /**
  * To Review - In figma design

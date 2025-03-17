@@ -28,7 +28,7 @@ $layout_classes_attrs = array(
 
 					<?php if ($args['title']) : ?>
 						<header class="layout__header animation animation--fade-in-up">
-							<h2 class="heading__black"><?php echo esc_attr($args['title']); ?></h2>
+							<h2 class="heading__black medium"><?php echo $args['title']; ?></h2>
 						</header>
 					<?php endif; ?>
 

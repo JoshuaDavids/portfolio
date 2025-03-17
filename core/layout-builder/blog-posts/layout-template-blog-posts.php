@@ -22,7 +22,7 @@ $layout_classes_attrs = array(
 		<div class="layout__inner">
 			<?php if ($args['title']) : ?>
 				<header class="layout__header animation animation--fade-in-up">
-					<h2 class="heading__black"><?php echo $args['title']; ?></h2>
+					<h2 class="heading__black medium"><?php echo $args['title']; ?></h2>
 				</header>
 			<?php endif; ?>
 
@@ -35,7 +35,7 @@ $layout_classes_attrs = array(
 
 						<div class="card__data">
 							<span class="card__description"><?php echo get_the_date('F j, Y'); ?></span>
-							<h2 class="card__title"><?php echo get_the_title($single_post); ?></h2>
+							<h2 class="card__title"><?php echo wp_trim_words(get_the_title($single_post), 9, "..."); ?></h2>
 							<a href="<?php echo get_permalink($single_post); ?>" class="card__button">Read More</a>
 						</div>
 					</article>

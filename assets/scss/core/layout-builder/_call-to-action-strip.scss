@@ -2,17 +2,55 @@
 // Call To Action : Strip
 // --------------------------------------------------
 
-@include media-breakpoint-up(lg) {
-  .layout--call-to-action-strip {
-    .layout__content {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-    }
+.layout--call-to-action-strip {
+  padding-top: 4rem !important;
+  .layout__content {
+    position: relative;
+    height: 500px;
+    background-color: rgba(#ffffff, 0.02);
+    backdrop-filter: blur(100px);
+    border-radius: 50px;
+    z-index: 2;
+    padding: 3rem 2rem;
+    bottom: 0;
+    // border: 1px solid #fff;
+  }
+  .blob-outer-container {
+    position: absolute;
+    height: 500px;
+    width: 100%;
+    z-index: 1;
+    inset: 0;
+    .blob-inner-container {
+      border-radius: 99999px;
+      position: absolute;
+      inset: 0;
+      margin: auto;
+      width: 100vw;
+      height: 100vh;
+      min-width: 1000px;
+      overflow: hidden;
+      background-color: #fff;
+      transform: scale(0.45);
+      top: 25%;
+      .blob {
+        position: absolute;
+        width: 150vw;
+        height: 150vh;
+        inset: 0;
+        margin: auto;
+        background: conic-gradient(from 0deg, $primary, $secondary, $primary, $secondary);
+        animation: spinBlob 8s linear infinite;
+      }
 
-    .layout__body {
-      flex: 1;
-      margin-bottom: 0;
+      @keyframes spinBlob {
+        0% {
+          transform: rotate(0deg) scale(2);
+        }
+        100% {
+          transform: rotate(1turn) scale(2);
+        }
+      }
     }
   }
 }

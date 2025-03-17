@@ -1,0 +1,88 @@
+//
+// Testimonials Slider
+// --------------------------------------------------
+
+.layout--testimonials-slider {
+  padding-block: 80px;
+
+  .card {
+    height: 100% !important;
+
+    .card-body {
+      padding: 3.5rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .testimonial__image {
+      .media__inner {
+        width: 3.5rem;
+        height: 3.5rem;
+        object-fit: cover;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+    }
+    .testimonial__details {
+      h4 {
+        font-size: 1.25rem;
+        line-height: 1.875rem;
+      }
+    }
+  }
+
+  .swiper {
+    overflow: unset;
+    .swiper-controls {
+      padding-bottom: 2.5rem;
+      .d-flex {
+        .swiper-scrollbar {
+          position: relative !important;
+          width: 360px;
+          height: 8px !important;
+          left: unset !important;
+          bottom: unset !important;
+          top: unset !important;
+          z-index: 50;
+
+          .swiper-scrollbar-drag {
+            background-color: $primary;
+          }
+        }
+        .swiper-button-prev.swiper-button-disabled,
+        .swiper-button-next.swiper-button-disabled {
+          circle {
+            fill: #eae8e6;
+          }
+        }
+        .swiper-button-prev,
+        .swiper-button-next {
+          circle {
+            fill: $primary;
+          }
+        }
+        .swiper-button-prev,
+        .swiper-button-next {
+          svg.icon {
+            width: 3.44625rem;
+            height: 3.44625rem;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      .swiper-slide {
+        height: 100% !important;
+      }
+      .swiper-controls {
+        .d-flex {
+          align-items: center;
+          .swiper-scrollbar {
+            width: 200px;
+          }
+        }
+      }
+    }
+  }
+}

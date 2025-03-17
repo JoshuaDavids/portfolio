@@ -50,7 +50,9 @@ defined('ABSPATH') || exit;
 				<div class="g-col-12 g-col-lg-6 g-col-xl-8">
 					<div class="d-flex flex-column">
 						<span class="pb-5">
-							<?php wskt_footer_brand(); ?>
+							<a style="text-decoration: unset;" href="<?php echo home_url(); ?>">
+								<span style="font-size: 3.5rem; line-height: 3rem; color: #fff;" class="heading__black">Josh</span>
+							</a>
 						</span>
 
 						<?php if (! empty($args['strapline'])) : ?>
