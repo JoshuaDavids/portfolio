@@ -34,12 +34,11 @@ $layout_classes_attrs = array(
 					</div>
 				<?php endif; ?>
 
-				<footer class="layout__footer animation animation--fade-in-up animation--delay-4">
-					<div class="d-flex">
-						<div class="button"><?php wskt_button($args['button']); ?></div>
-						<div class="button-two"></div>
-					</div>
-				</footer>
+				<?php if ($args['button']) : ?>
+					<!-- <footer class="layout__footer animation animation--fade-in-up animation--delay-4"> -->
+					<!-- <div class="button"><?php wskt_button($args['button']); ?></div> -->
+					<!-- </footer> -->
+				<?php endif; ?>
 
 			</div>
 
